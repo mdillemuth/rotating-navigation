@@ -1,27 +1,22 @@
-/* ===== GOOGLE FONTS ===== */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* ===== IMPORTS ===== */
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
-/* ===== CSS RESETS ===== */
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* ===== CUSTOM ROLES ===== */
+:root {
+  --primary-color: #e10600;
 }
 
-/* ===== GENERAL STYLES ===== */
+/* ===== RESETS ===== */
+* {
+  box-sizing: border-box;
+}
 
 body {
-  font-family: 'Roboto', sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  overflow-x: hidden;
+  font-family: 'Lato', sans-serif;
   background-color: #333;
   color: #222;
+  overflow-x: hidden;
+  margin: 0;
 }
 
 .container {
@@ -44,7 +39,7 @@ body {
 }
 
 .circle {
-  background-color: #e10600;
+  background-color: var(--primary-color);
   height: 200px;
   width: 200px;
   border-radius: 50%;
@@ -120,6 +115,14 @@ nav ul li + li {
 nav ul li + li + li {
   margin-left: 30px;
   transform: translateX(-200%);
+}
+
+nav ul li {
+  cursor: pointer;
+}
+
+nav ul li:hover {
+  color: var(--primary-color);
 }
 
 .content img {
